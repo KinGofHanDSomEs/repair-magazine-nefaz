@@ -10,13 +10,13 @@
 optimize:
 	php artisan optimize
 
-# serve service
-serve: optimize
-	php artisan serve
-
 # show list of routes
-route:
+route: optimize
 	php artisan route:list
+
+# serve service
+serve: route
+	php artisan serve
 
 
 
@@ -32,7 +32,19 @@ dev: build
 
 
 
-# 3. DataBase Commands
+# 3. Make Component Commands
+
+# create view (flag: v=<view>)
+view:
+	php artisan make:view $(v)
+
+# create controller (without word "Controller", flag: c=<controller_name>)
+controller:
+	php artisan make:controller $(c)Controller
+
+# create resource controller (without word "Controller", flag: c=<controller_name>)
+controller-resource:
+	php artisan make:controller $(c)Controller -r
 
 # create migration, factory and seeder for model (flag: m=<model>)
 model-full:
@@ -58,8 +70,11 @@ seeder:
 foreign:
 	php artisan make:migration add_foreign_to_$(t)_table
 
+
+# 4. Database Commands
+
 # deleting tables, create tables and filling records
-migrate-up: optimize wipe migrate seed
+migrate-up: wipe migrate seed
 
 # deleting tables
 wipe: optimize
@@ -72,18 +87,6 @@ migrate: optimize
 # filling records
 seed: optimize
 	php artisan db:seed
-
-
-
-# 4. Controller Commands
-
-# create controller (without word "Controller": c=<controller_name>)
-controller:
-	php artisan make:controller $(c)Controller
-
-# create resource controller (without word "Controller": c=<controller_name>)
-controller-resource:
-	php artisan make:controller $(c)Controller -r
 
 
 
