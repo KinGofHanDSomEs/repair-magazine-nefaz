@@ -1,0 +1,16 @@
+:root {
+    --font-size: 16px;
+}
+
+:root, :root[theme='light'] {
+    --bg-color-1: #044B99;
+    --bg-color-2: #0353AB;
+
+    --bg-color-3: white;
+    --bg-color-4: #F0F9FB;
+
+    --color-1: white;
+    --color-2: black;
+    --color-3: #939393;
+    --color-4: #044B99;
+}
