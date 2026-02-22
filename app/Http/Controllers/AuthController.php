@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Constants\Errors\ValidationErrors;
 use App\Constants\Errors\AuthErrors;
 use App\Constants\Errors\SystemErrors;
-use App\Constants\Errors\ValidationErrors;
 use App\Models\User;
 use Exception;
 use Illuminate\Database\QueryException;
@@ -40,7 +40,7 @@ class AuthController extends Controller
                 'id' => $user->id,
             ]);
 
-            return redirect()->route('profile');
+            return redirect()->route('orders');
         } catch (ValidationException $e) {
             $errors = $e->errors();
 
@@ -48,19 +48,19 @@ class AuthController extends Controller
                 'errors' => $errors,
             ]);
 
-            return redirect()->back()->withErrors($errors);
+            return redirect()->back()->withErrors($errors)->withInput();
         } catch (QueryException $e) {
             logger()->warning('AuthController.register: Query exception', [
                 'exception' => $e,
             ]);
 
-            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL]);
+            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL])->withInput();
         } catch (Exception $e) {
             logger()->alert('AuthController.register: Unknown error', [
                 'exception' => $e,
             ]);
 
-            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL]);
+            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL])->withInput();
         }
     }
 
@@ -85,7 +85,7 @@ class AuthController extends Controller
                 'id' => Auth::id(),
             ]);
 
-            return redirect()->route('profile');
+            return redirect()->route('orders');
         } catch (ValidationException $e) {
             $errors = $e->errors();
 
@@ -93,13 +93,13 @@ class AuthController extends Controller
                 'errors' => $errors,
             ]);
 
-            return redirect()->back()->withErrors($errors);
+            return redirect()->back()->withErrors($errors)->withInput();
         } catch (Exception $e) {
             logger()->alert('AuthController.login: Unknown error', [
                 'exception' => $e,
             ]);
 
-            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL]);
+            return redirect()->back()->withErrors(['global' => SystemErrors::INTERNAL])->withInput();
         }
     }
 
