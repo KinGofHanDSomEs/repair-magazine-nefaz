@@ -8,31 +8,20 @@
     <title>@yield('title', 'Главная')</title>
     @vite('resources/css/style.css')
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col bg1 overflow-x-hidden scroll-smooth">
 
-<header class="shrink-0">
-    <div class="container mx-auto">
-        @include('inc.header')
-    </div>
+<header class="shrink-0 bg4">
+    @include('inc.header')
 </header>
 
-<main class="shrink">
-    <div class="container mx-auto bg-">
-        <h1>Первый</h1>
-        <h2>Второй</h2>
-        <h3>Третий</h3>
-        <p>Абзац</p>
-        <a href="">Ссылка</a>
-        <label for="">Лэйбл</label>
-        @yield('main')
-    </div>
+<main class="shrink flex-1">
+    @yield('main')
 </main>
 
 <footer class="shrink-0 mt-auto">
-    <div class="container mx-auto">
-        @include('inc.footer')
-    </div>
+    @include('inc.footer')
 </footer>
 
+@stack('scripts')
 </body>
 </html>
