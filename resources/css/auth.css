@@ -1,0 +1,33 @@
+@import './root.css';
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main form .group-input input, main form button {
+    border-color: var(--color-2);
+}
+
+main form .group-input input:focus {
+    border-color: var(--bg-color-3);
+}
+
+main form button {
+    &:hover {
+        color: var(--color-2);
+    }
+
+    &:active {
+        color: var(--color-3);
+        border-color: var(--bg-color-3);
+    }
+}
+
+main form a {
+    &:hover {
+        color: var(--color-4);
+    }
+}
