@@ -1,0 +1,18 @@
+@import './root.css';
+
+.bg1 { background-color: var(--bg-color-1); }
+.bg2 { background-color: var(--bg-color-2); }
+.bg3 { background-color: var(--bg-color-3); }
+.bg4 { background-color: var(--bg-color-4); }
+
+.c1 { color: var(--color-1); }
+.c2 { color: var(--color-2); }
+.c3 { color: var(--color-3); }
+.c4 { color: var(--color-4); }
+.c5 { color: var(--color-5); }
+
+.border-c1 { border-color: var(--color-1); }
+.border-c2 { border-color: var(--color-2); }
+.border-c3 { border-color: var(--color-3); }
+.border-c4 { border-color: var(--color-4); }
+.border-c5 { border-color: var(--color-5); }

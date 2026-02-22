@@ -3,14 +3,14 @@
 }
 
 :root, :root[theme='light'] {
-    --bg-color-1: #044B99;
-    --bg-color-2: #0353AB;
-
-    --bg-color-3: white;
-    --bg-color-4: #F0F9FB;
+    --bg-color-1: white;
+    --bg-color-2: #e2e8f0;
+    --bg-color-3: #0353AA;
+    --bg-color-4: #044A98;
 
     --color-1: white;
-    --color-2: black;
-    --color-3: #939393;
-    --color-4: #044B99;
+    --color-2: #9ca3af;
+    --color-3: #044A98;
+    --color-4: black;
+    --color-5: #0353AA;
 }

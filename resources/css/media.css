@@ -1,32 +1,46 @@
 @import './root.css';
 
-@media screen and (max-width: 640px) {
+@media screen and (width <= 320px) {
     :root {
-        --font-size: 6px;
+        --font-size: 4px;
+    }
+
+    header > .container, main > .container, footer .container {
+        padding-inline: .25rem;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (320px < width <= 640px) {
     :root {
         --font-size: 8px;
     }
+
+    header > .container, main > .container, footer .container {
+        padding-inline: .5rem;
+    }
 }
 
-
-@media screen and (max-width: 1024px) {
+@media screen and (640px < width <= 768px) {
     :root {
         --font-size: 10px;
     }
 }
 
-@media screen and (max-width: 1280px) {
+
+@media screen and (768px < width <= 1024px) {
     :root {
         --font-size: 12px;
     }
 }
 
-@media screen and (max-width: 1536px) {
+@media screen and (1024px < width <= 1280px) {
     :root {
         --font-size: 14px;
+    }
+}
+
+@media screen and (1280px < width <= 1536px) {
+    :root {
+        --font-size: 15px;
     }
 }
