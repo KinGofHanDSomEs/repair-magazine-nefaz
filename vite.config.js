@@ -10,6 +10,9 @@ export default defineConfig({
                 'resources/css/media.css',
                 'resources/css/root.css',
                 'resources/css/style.css',
+                'resources/css/auth.css',
+                'resources/css/fonts.css',
+                'resources/css/variables.css'
             ],
             refresh: true,
         }),
