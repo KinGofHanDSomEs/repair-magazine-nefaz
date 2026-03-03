@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use Database\Factories\TechnicFactory;
+use Database\Factories\TypeFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 
@@ -14,14 +14,13 @@ use Illuminate\Notifications\Notifiable;
 /**
  * @mixin Builder
  */
-class Technic extends Model
+class Type extends Model
 {
-    /** @use HasFactory<TechnicFactory> */
+    /** @use HasFactory<TypeFactory> */
     use HasFactory, Notifiable, SoftDeletes;
 
     protected $fillable = [
-        'name',
-        'image_url'
+        'model'
     ];
 
     protected $hidden = [
@@ -30,7 +29,7 @@ class Technic extends Model
         'deleted_at',
     ];
 
-    public function types(): hasMany {
-        return $this->hasMany(Type::class);
+    public function technic(): BelongsTo {
+        return $this->belongsTo(Technic::class);
     }
 }
