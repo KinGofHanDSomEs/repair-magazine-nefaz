@@ -9,14 +9,18 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, th {
     font-family: 'Montserrat', sans-serif;
 }
 
-a, p, label, input, textarea {
+a, p, label, input, textarea, td, select, option {
     font-family: 'Open Sans', sans-serif;
 }
 
 header .links a:hover {
     color: var(--color-2);
+}
+
+header {
+    box-shadow: 0 1px 2px 0 var(--color-1);
 }

@@ -1,15 +1,22 @@
 @import './root.css';
 
-.bg1 { background-color: var(--bg-color-1); }
-.bg2 { background-color: var(--bg-color-2); }
-.bg3 { background-color: var(--bg-color-3); }
-.bg4 { background-color: var(--bg-color-4); }
-
 .c1 { color: var(--color-1); }
 .c2 { color: var(--color-2); }
 .c3 { color: var(--color-3); }
 .c4 { color: var(--color-4); }
 .c5 { color: var(--color-5); }
+
+.bg1 { background-color: var(--color-1); }
+.bg2 { background-color: var(--color-2); }
+.bg3 { background-color: var(--color-3); }
+.bg4 { background-color: var(--color-4); }
+.bg5 { background-color: var(--color-5); }
+
+.bgt1 { background-color: rgba(from var(--color-1) r g b / 0.5); }
+.bgt2 { background-color: rgba(from var(--color-2) r g b / 0.5); }
+.bgt3 { background-color: rgba(from var(--color-3) r g b / 0.5); }
+.bgt4 { background-color: rgba(from var(--color-4) r g b / 0.5); }
+.bgt5 { background-color: rgba(from var(--color-5) r g b / 0.5); }
 
 .border-c1 { border-color: var(--color-1); }
 .border-c2 { border-color: var(--color-2); }

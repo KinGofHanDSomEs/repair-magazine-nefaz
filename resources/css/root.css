@@ -3,14 +3,19 @@
 }
 
 :root, :root[theme='light'] {
-    --bg-color-1: white;
-    --bg-color-2: #e2e8f0;
-    --bg-color-3: #0353AA;
-    --bg-color-4: #044A98;
-
     --color-1: white;
-    --color-2: #9ca3af;
-    --color-3: #044A98;
-    --color-4: black;
-    --color-5: #0353AA;
+    --color-2: black;
+    --color-3: oklch(48.8% 0.243 264.376);
+    --color-4: oklch(70.7% 0.165 254.624);
+    --color-5: gray;
+    --color-6: oklch(97% 0.014 254.604);
+}
+
+:root[theme='dark'] {
+    --color-1: black;
+    --color-2: white;
+    --color-3: oklch(70.7% 0.165 254.624);
+    --color-4: oklch(48.8% 0.243 264.376);
+    --color-5: gray;
+    --color-6: oklch(28.2% 0.091 267.935);
 }

@@ -1,0 +1,98 @@
+@import './root.css';
+
+/* all users pages */
+
+main .heading a:hover {
+    color: var(--color-3);
+}
+
+
+/* users.index page */
+
+main .heading .add-btn:hover {
+    color: var(--color-2);
+}
+
+main .users-container table th, main .users-container table td {
+    padding-inline: .2rem;
+}
+
+main .users-container table tbody tr:hover {
+    background-color: var(--color-6);
+}
+
+@media screen and (width <= 320px) {
+    main .users-container table {
+        font-size: .5rem;
+
+    }
+}
+
+@media screen and (320px < width <= 640px) {
+    main .users-container table {
+        font-size: .4rem;
+    }
+}
+
+@media screen and (640px < width <= 768px) {
+    main .users-container table {
+        font-size: .4rem;
+    }
+}
+
+@media screen and (768px < width <= 1024px) {
+    main .users-container table {
+        font-size: .5rem;
+    }
+}
+
+
+/* users.create page */
+
+main .create-form button, main .create-form a {
+    &:hover {
+        color: var(--color-3);
+    }
+
+    &:active {
+        color: var(--color-3);
+        border-color: var(--color-3);
+    }
+}
+
+main .create-form input, main .create-form select {
+    &:focus {
+        border-color: var(--color-3);
+
+    }
+}
+
+
+/* users.show page */
+
+main .btns a, main .btns button {
+    &:hover {
+        color: var(--color-3);
+    }
+}
+
+
+/* users.edit page */
+
+main .update-form button, main .update-form a {
+    &:hover {
+        color: var(--color-3);
+    }
+
+    &:active {
+        color: var(--color-3);
+        border-color: var(--color-3);
+    }
+}
+
+main .update-form input, main .update-form select {
+    &:focus {
+        border-color: var(--color-3);
+
+    }
+}

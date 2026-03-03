@@ -8,6 +8,10 @@
     header > .container, main > .container, footer .container {
         padding-inline: .25rem;
     }
+
+    main .information .catalog {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media screen and (320px < width <= 640px) {
@@ -16,13 +20,21 @@
     }
 
     header > .container, main > .container, footer .container {
-        padding-inline: .5rem;
+        padding-inline: .75rem;
+    }
+
+    main .information .catalog {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media screen and (640px < width <= 768px) {
     :root {
         --font-size: 10px;
+    }
+
+    main .information .catalog {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -31,6 +43,7 @@
     :root {
         --font-size: 12px;
     }
+
 }
 
 @media screen and (1024px < width <= 1280px) {

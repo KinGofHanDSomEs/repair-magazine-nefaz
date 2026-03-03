@@ -1,33 +1,35 @@
 @import './root.css';
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main form .group-input input, main form button {
-    border-color: var(--color-2);
-}
+/* login, register pages */
 
 main form .group-input input:focus {
-    border-color: var(--bg-color-3);
+    border-color: var(--color-3);
 }
 
 main form button {
     &:hover {
-        color: var(--color-2);
+        color: var(--color-3);
     }
 
     &:active {
         color: var(--color-3);
-        border-color: var(--bg-color-3);
+        border-color: var(--color-3);
     }
 }
 
 main form a {
     &:hover {
-        color: var(--color-4);
+        color: var(--color-2);
     }
+}
+
+
+/* profile page */
+
+main .information .title .change:hover {
+    color: var(--color-2);
+}
+
+main .information .value form .cancel-btn:hover {
+    color: var(--color-3);
 }
