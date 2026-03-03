@@ -3,7 +3,6 @@
 # To start makefile commands use: make <command> <flags>
 
 
-
 # 1. Main Commands
 
 # optimize files
@@ -90,8 +89,18 @@ seed: optimize
 
 
 
-# 5. Cache Commands
+# 5. Clear Cache Commands
+# clear all caches
+cache: config-clear route-clear view-clear
 
-# clear cache
-cache: optimize
-	php artisan cache:clear
+# clear config cache
+config-clear: optimize
+	php artisan config:clear
+
+# clear route cache
+route-clear: optimize
+	php artisan route:clear
+
+# clear view cache
+view-clear: optimize
+	php artisan view:clear
