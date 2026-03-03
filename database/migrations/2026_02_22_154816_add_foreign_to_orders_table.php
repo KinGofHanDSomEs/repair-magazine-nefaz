@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             $table->foreignId('user_id')->after('id')->constrained('users');
-            $table->foreignId('technic_id')->after('user_id')->constrained('technics');
+            $table->foreignId('type_id')->after('user_id')->constrained('types');
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             $table->dropForeign('user_id');
-            $table->dropForeign('technic_id');
+            $table->dropForeign('type_id');
         });
     }
 };

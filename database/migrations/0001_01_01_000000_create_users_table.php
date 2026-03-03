@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('phone', 20);
+            $table->boolean('confirmed')->default(0);
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
