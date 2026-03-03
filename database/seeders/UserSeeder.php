@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -21,8 +20,13 @@ class UserSeeder extends Seeder
             'name' => 'Роман',
             'lastname' => 'Иванов',
             'phone' => '8-999-999-9999',
+            'confirmed' => '1'
         ]);
 
-        User::factory(10)->create();
+        User::factory(4)->create([
+            'confirmed' => '1'
+        ]);
+
+        User::factory(5)->create();
     }
 }
